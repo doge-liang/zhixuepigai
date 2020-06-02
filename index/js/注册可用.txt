@@ -1,0 +1,46 @@
+function getFocus()  //设置用户名文本框获取焦点
+{
+    document.getElementById("txtusername").focus();
+}
+ 
+function checkname()  //检查用户名
+{
+    var myname=document.getElementById("name").value;    //获取用户名文本框的值
+    var myDivname=document.getElementById("password");         //定义用户名文本框的提示
+    if(myname=="")
+    {
+        myDivname.innerHTML="用户名不能为空!";
+        return false;
+    }
+    for(var i=0;i<myname.length;i++)
+    {
+        var text=myname.charAt(i);
+        if(!(text<=9&&text>=0)&&!(text>='a'&&text<='z')&&!(text>='A'&&text<='Z')&&text!="_")
+        {
+         myDivname.innerHTML="用户名只能是数字、字母、下划线组成！";
+         break;
+        }
+    }
+    if(i>=myname.length)
+    {
+        myDivname.innerHTML="√";
+        return true;
+    }
+}
+ 
+function checkpassword()     //检查密码
+{
+  var mypassword=document.getElementById("txtpassword").value;   //获取密码文本框的值
+  var mydivpassword=document.getElementById("password");      //获取密码文本框的提示
+  if(mypassword=="")
+  {
+    mydivpassword.innerHTML="密码不能为空";
+    return false;
+  }else if(mypassword.length<6){
+    mydivpassword.innerHTML="密码至少为6位";
+    return false;
+  }else{
+    mydivpassword.innerHTML="√";
+    return true;
+  }
+}

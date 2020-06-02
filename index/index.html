@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>用户登录</title>
+<link rel="stylesheet" media="screen" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head>
+<body>
+<div id="main">
+  <div class="login">
+    <div class="login-top"> 用户登录 </div>
+    <form name="form" action="main.html" onsubmit="return submit()" method="post">
+      <div class="login-center clearfix">
+        <div class="login-center-img" ><img src="img/name.png"/></div>
+        <div class="login-center-input">
+          <input type="text" id="name" placeholder="请输入用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入用户名'"/>
+          <div class="login-center-input-text" >用户名</div>
+        </div>
+      </div>
+      <div class="login-center clearfix">
+        <div class="login-center-img" ><img src="img/password.png"/></div>
+        <div class="login-center-input">
+          <input type="password" id="password" placeholder="请输入密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入密码'"/>
+          <div class="login-center-input-text">密码</div>
+        </div>
+      </div>
+    </form>
+    <div class="login-button" > 
+      <script src="js/enter.js"></script>
+      <div id="back_ground" type="submit">
+        <div id="drag"><font color="white">➔</font></div>
+      </div>
+      <div class= "register"> <a href="#" class="fl" >注册账号</a> <a href="https://www.baidu.com/" class="fr" >忘记密码？</a> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

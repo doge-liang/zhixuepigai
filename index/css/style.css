@@ -1,0 +1,131 @@
+html, body {
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+canvas {
+    vertical-align: bottom;
+}
+.login {
+    position: fixed;
+    width: 450px;
+    border-radius: 30px;
+    height: 380px;
+    background: white;
+    box-shadow: 0px 0px 5px #333333;
+    top: 50%;
+    left: 70%;
+    margin-top: -250px;
+    margin-left: -200px;
+    
+}
+.login-top {
+    font-size: 24px;
+    margin-top: 50px;
+    padding-left: 85px;
+    box-sizing: border-box;
+    color: #333333;
+    margin-bottom: 50px;
+}
+.login-center {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 80px;
+    margin-bottom: 30px;
+}
+.login-center-img {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 5px;
+}
+.login-center-img>img {
+    width: 100%;
+}
+.login-center-input {
+    float: left;
+    width: 230px;
+    margin-left: 15px;
+    height: 30px;
+    position: relative;
+}
+.login-center-input input {
+    z-index: 2;
+    transition: all 0.5s;
+    padding-left: 10px;
+    color: #333333;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+}
+.login-center-input input:focus {
+    border: 1px solid dodgerblue;
+}
+.login-center-input-text {
+    background: white;
+    padding: 0 5px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 14px;
+    left: 5px;
+    color: dodgerblue;
+    line-height: 20px;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    /* Firefox 4 */
+    -webkit-transition: all 0.5s;
+    /* Safari 和 Chrome */
+    -o-transition: all 0.5s;/* Opera */
+}
+.login-center-input input:focus~.login-center-input-text {
+    top: 0;
+    z-index: 3;
+    opacity: 1;
+    margin-top: -15px;
+}
+.login-button {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+#back_ground{
+	border-radius: 48px;
+	background: lightblue;
+	width: 250px;
+	height: 50px;   	    
+}		
+#drag{
+	border-radius: 50px;
+	cursor: move;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	font-size: 40px;
+	background: cornflowerblue;
+}
+.register {
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+    margin-top: 25px;
+}
