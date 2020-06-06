@@ -11,10 +11,11 @@ window.onload = function () {
 			}
 			if (left>=300){
 				left = 300;
-				check();
-				drag.style.left = "99px";
 				this.onmousemove = null;//移除移动事件
 				this.onmousedown = null;
+				check();
+				drag.style.left = "99px";
+				
 			}
 			else{
 				drag.style.left = left+"px";
