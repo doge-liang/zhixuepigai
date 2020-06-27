@@ -22,4 +22,8 @@ spring:
       ddl-auto: update
     show-sql: true
 
+file:
+  upload:
+    path: D:\\dev
+
 
