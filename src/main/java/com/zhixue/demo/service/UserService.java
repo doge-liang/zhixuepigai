@@ -2,6 +2,7 @@ package com.zhixue.demo.service;
 
 import com.zhixue.demo.entity.UserDO;
 import com.zhixue.demo.exception.GlobalException;
+import lombok.Synchronized;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @Date 2020/6/27 0:58
  * @Version 1.0
  **/
-public interface UserService extends BaseService<UserDO> {
+public interface UserService {
 
     // TODO 登陆相关
 
@@ -39,6 +40,10 @@ public interface UserService extends BaseService<UserDO> {
      */
     void loginOut() throws GlobalException;
 
+    UserDO insertOne(UserDO one) throws GlobalException;
+
+    UserDO get(Long id) throws GlobalException;
+
     /**
      * 根据ID列表获取姓名列表
      * @param idList
@@ -46,6 +51,8 @@ public interface UserService extends BaseService<UserDO> {
      * @throws GlobalException
      */
     List<String> listNameByIds(List<Long> idList) throws GlobalException;
+
+    UserDO update(UserDO one, String[] ignoreFields) throws GlobalException;
 
     /**
      * 更新自己的密码
@@ -55,4 +62,5 @@ public interface UserService extends BaseService<UserDO> {
      */
     void updatePassword(String password) throws GlobalException;
 
+    void removeOne(Long id) throws GlobalException;
 }

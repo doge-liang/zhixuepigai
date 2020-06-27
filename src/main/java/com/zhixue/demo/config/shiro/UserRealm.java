@@ -31,10 +31,6 @@ public class UserRealm extends AuthorizingRealm {
     @Autowired
     private UserService userService;
 
-/*
-    @Autowired
-    private RolePermissionService rpService;
-*/
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
@@ -62,15 +58,15 @@ public class UserRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-        String tel = (String) token.getPrincipal(); // TODO
+        String username = (String) token.getPrincipal(); // TODO
         String password = new String ((char[]) token.getCredentials());
 
-        UserDO user = userService.getUser(tel, password);
+        UserDO user = userService.getUser(username, password);
         if (user == null) {
             throw new UnknownAccountException();
         }
 
-        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(tel, password, getName());  // ???
+        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(username, password, getName());  // ???
 
         Session session = SecurityUtils.getSubject().getSession();
 
